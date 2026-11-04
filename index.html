@@ -1,0 +1,544 @@
+<!--
+  ======================================================================
+  INSTITUCIÓN: CBTis 166 Pablo Torres Burgos
+  ----------------------------------------------------------------------
+  * Estudiante: Aranda Abundez Axel Aldair
+  * Grupo: 3B PRO VESP  
+  * Actividad: Portal Institucional (Con barra superior, collage y formulario)
+  ====================================================================== -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREPA 1- Portal Oficial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR DE CONTACTO -->
+    <div class="top-bar" id="inicio">
+        <div class="top-bar-container">
+            <div class="top-contacts">
+                <span class="top-item">📞 777 985 1855</span>
+                <span class="top-item whatsapp">💬 Escríbenos por <strong>WhatsApp</strong></span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- BARRA DE NAVEGACIÓN PRINCIPAL -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#inicio">
+                    <img src="data:image/webp;base64,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" alt="CBTis 166" class="brand-logo-img">
+                </a>
+            </div>
+
+
+            <nav class="navbar-menu" aria-label="Navegación principal">
+                <!-- Botón del menú hamburguesa -->
+                <button type="button" class="hamburger" id="hamburger-btn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <!-- MENÚ PRINCIPAL -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
+
+                    <!-- SUBMENÚ NIVEL 1 + NIVEL 2: OFERTA EDUCATIVA -->
+                    <li class="nav-item dropdown-item">
+                        <a href="#" class="nav-link dropdown-btn" id="dropdown-oferta-btn">
+                            Oferta Educativa <span class="arrow">▾</span>
+                        </a>
+                        <ul class="submenu" id="submenu-oferta">
+                            <!-- Ítem con Submenú Nivel 2 (Talleres) -->
+                            <li class="submenu-item dropdown-subitem">
+                                <a href="#" class="submenu-link dropdown-subbtn" id="dropdown-talleres-btn">
+                                    Talleres <span class="arrow-right">▸</span>
+                                </a>
+                                <ul class="sub-submenu" id="sub-submenu-talleres">
+                                    <li><a href="#oferta" class="submenu-link">Fútbol</a></li>
+                                    <li><a href="#oferta" class="submenu-link">Voleibol</a></li>
+                                    <li><a href="#oferta" class="submenu-link">Defensa personal</a></li>
+                                    <li><a href="#oferta" class="submenu-link">Cocina</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#docentes" class="submenu-link">Planta docente</a></li>
+                            <li><a href="#informes" class="submenu-link">Solicita informes</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- SUBMENÚ NIVEL 1 + NIVEL 2: NUESTRA ESCUELA -->
+                    <li class="nav-item dropdown-item">
+                        <a href="#" class="nav-link dropdown-btn" id="dropdown-escuela-btn">
+                            Nuestra Escuela <span class="arrow">▾</span>
+                        </a>
+                        <ul class="submenu" id="submenu-escuela">
+                            <li><a href="#galeria" class="submenu-link">Galería</a></li>
+                            <!-- Ítem con Submenú Nivel 2 (Multimedia) -->
+                            <li class="submenu-item dropdown-subitem">
+                                <a href="#" class="submenu-link dropdown-subbtn" id="dropdown-multimedia-btn">
+                                    Multimedia <span class="arrow-right">▸</span>
+                                </a>
+                                <ul class="sub-submenu" id="sub-submenu-multimedia">
+                                    <li><a href="#video" class="submenu-link">Video institucional</a></li>
+                                    <li><a href="#himno" class="submenu-link">Himno Nacional</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#ubicacion" class="submenu-link">Ubicación</a></li>
+                            <li><a href="#convenios" class="submenu-link">Convenios</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="login.html" class="nav-link btn-nav-login">Alumnos</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <!-- SECCIÓN DE DOS COLUMNAS CON COLLAGE DE IMÁGENES -->
+    <section class="hero-section">
+        <div class="hero-container">
+            
+            <!-- Columna Izquierda: Textos, Botón y Beneficios -->
+            <div class="hero-text-side">
+                <span class="hero-tag">¡INSCRIPCIONES ABIERTAS!</span>
+                <h1>Educación Media Superior con Validez Oficial SEP</h1>
+                <p>" Estudia tu bachillerato en la preparatoria numero 1 del estado de Morelos(Ambos turnos).</p>
+                
+                <div class="hero-cta-box">
+                    <a href="login.html" class="btn-orange">Solicita informes →</a>
+                    <div class="hero-benefits">
+                        <span>✓ Talleres variados</span>
+                        <span>✓ Colegiaturas accesibles</span>
+                        <span>✓ Prácticas en laboratorios equipados</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Collage de Imágenes -->
+            <div class="hero-image-side">
+                <div class="image-collage">
+                    <div class="collage-main">
+                        <img src="https://th.bing.com/th/id/OIP.IbiWX49wnguNfBH-_tAzDwHaEJ?w=291&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Estudiante CBTis">
+                    </div>
+                    <div class="collage-sub">
+                        <img src="https://th.bing.com/th/id/OIP.iz1zuHDwefp-Z1G3SxAmZgHaEL?w=257&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Laboratorista">
+                        <img src="https://th.bing.com/th/id/OIP.As9qx2_MZIkLbtwf8S9TAQHaFj?w=241&h=181&c=7&r=0&o=7&pid=1.7&rm=3" alt="Programación">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE OFERTA EDUCATIVA CON IMÁGENES ALUSIVAS -->
+    <section id="oferta" class="careers-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2><i>Algunos de nuestros talleres</h2>
+                <p>Elige tu taller y concluye tu bachillerato básico con nosotros.</p>
+            </div>
+
+            <div class="careers-grid">
+                
+                <!-- Carrera 1: Recursos Humanos -->
+                <div class="career-card">
+                    <div class="career-img-container">
+                        <img src="https://www.bing.com/th/id/OIP.AOEarxBXoagYdTv_YpH_bQHaEK?w=193&h=135&c=8&rs=1&qlt=90&o=6&pid=ImgAns&rm=2" alt="Recursos Humanos">
+                    </div>
+                    <div class="career-content">
+                        <h3>Futbol</h3>
+                        <p>Deporte atlético con un buen rendimiento que mejora la actividad motriz.</p>
+                    </div>
+                </div>
+
+                <!-- Carrera 2: Programación -->
+                <div class="career-card">
+                    <div class="career-img-container">
+                        <img src="https://www.bing.com/th/id/OIP.yKwi4TJj60Lw1G-Ko0t33QHaE8?w=193&h=135&c=8&rs=1&qlt=90&o=6&pid=ImgAns&rm=2" alt="Programación">
+                    </div>
+                    <div class="career-content">
+                        <h3>volleybal</h3>
+                        <p>Deporte con gran movilidad y altos beneficios para la salud.</p>
+                    </div>
+                </div>
+
+                <!-- Carrera 3: Ciberseguridad -->
+                <div class="career-card">
+                    <div class="career-img-container">
+                        <img src="https://www.bing.com/th/id/OIP.iMw6wd-Z9wbpcCUO5mPYPQAAAA?w=193&h=135&c=8&rs=1&qlt=90&o=6&pid=ImgAns&rm=2" alt="Ciberseguridad">
+                    </div>
+                    <div class="career-content">
+                        <h3>Deefensa personal</h3>
+                        <p>Aprende a defenderte de manera efectiva sin causar lesiones mayores.</p>
+                    </div>
+                </div>
+
+                <!-- Carrera 4: Laboratorista Clínico -->
+                <div class="career-card">
+                    <div class="career-img-container">
+                        <img src="https://www.bing.com/th/id/OIP.p9cRFoOxoopJwhJ3aGVzeAHaJ4?w=193&h=258&c=8&rs=1&qlt=90&o=6&pid=ImgAns&rm=2" alt="Laboratorista Clínico">
+                    </div>
+                    <div class="career-content">
+                        <h3>Cocina</h3>
+                        <p>Aprende a desarrollar tus habilidades en la cocina mediante la preparacion de recetas sencillas y accesibles.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE DOCENTES CON RECORRIDO INTERACTIVO (JS) -->
+    <section class="teachers-section" id="docentes">
+        <div class="teachers-container">
+            
+            <div class="teachers-header">
+                <div>
+                    <span class="teachers-tag">¿QUIÉN ENSEÑA EN LA prepa 1?</span>
+                    <h2>Nuestra Plantilla Docente</h2>
+                    <p>Los profesores de nuestro plantel son especialistas activos en su ramo. Utiliza los botones para recorrer el catálogo completo de nuestra planta académica:</p>
+                </div>
+                <!-- Botones funcionales con IDs -->
+                <div class="teachers-nav-buttons">
+                    <button id="btn-prev" class="nav-btn">‹</button>
+                    <button id="btn-next" class="nav-btn">›</button>
+                </div>       
+            </div>
+
+            <!-- Contenedor de las tarjetas de docentes (controlado por JS) -->
+            <div class="teachers-grid" id="teachers-track">
+                
+                <!-- Grupo 1 (Primeros 4 profesores) -->
+                <div class="teacher-card">
+                    <img src="https://th.bing.com/th/id/OIP.r1YW8c-UJB-FbvDzzP6ANwHaEK?w=304&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Profesor">
+                    <div class="teacher-info">
+                        <h3>Berenice Gonzalez Leonides</h3>
+                        <p>Especialista en Biología I.</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="https://th.bing.com/th/id/OIP.EIx6umhq1dZOaborAZB1MQHaFB?w=282&h=192&c=7&r=0&o=7&pid=1.7&rm=3" alt="Profesora">
+                    <div class="teacher-info">
+                        <h3>Mtro. Isaias Enrique Perez Mendoza </h3>
+                        <p>Maestría en Física I.</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="https://th.bing.com/th/id/OIP.QLp5BL4MnDDmE5EkbpeM6AHaEG?w=335&h=186&c=7&r=0&o=7&pid=1.7&rm=3" alt="Profesor" >
+                    <div class="teacher-info">
+                        <h3>Prof. Julio Cesar Arce Figueroa </h3>
+                        <p> Educación Física III.</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="https://th.bing.com/th/id/OIP.rdWYYwlaeENPxdSsroTIiAHaEK?w=291&h=181&c=7&r=0&o=7&pid=1.7&rm=3" alt="Profesor">
+                    <div class="teacher-info">
+                        <h3>profr. Juan Manuel Mendoza Moreno</h3>
+                        <p>Historía de México II.</p>
+                    </div>
+                </div>
+
+                <!-- Grupo 2 (Otros 4 profesores / Ejemplos adicionales para el recorrido) -->
+                <div class="teacher-card">
+                    <img src="https://th.bing.com/th/id/OIP.EOPZaaXKLkOTWMI9loVBugHaEe?w=287&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Profesora">
+                    <div class="teacher-info">
+                        <h3>Prof Gustavo Adolfo de la Cruz Morales</h3>
+                        <p>Maestría en Ingles III.</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="data:image/webp;base64,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" alt="Profesor">
+                    <div class="teacher-info">
+                        <h3>Ing. Ulises Ocampo Ocampo</h3>
+                    <p>Ingeniero en Matemáticas III</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="data:image/webp;base64,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" alt="Profesora">
+                    <div class="teacher-info">
+                        <h3>QVerónica Gonzales Molina</h3>
+                        <p>Coordinadora de Prácticas en el Laboratorio y Bioquímica.</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="https://th.bing.com/th/id/OIP.Eqs0F2o3WoTupTCJSdQweQHaDQ?w=330&h=153&c=7&r=0&o=7&pid=1.7&rm=3" alt="Profesor">
+                    <div class="teacher-info">
+                        <h3>Alberto Campos Aguirre </h3>
+                        <p>Física I.</p>
+                    </div>
+                </div>
+
+            </div>
+
+                <header id="galeria">
+                    <h2>Bienvenido a tu escuela:</h2>
+                </header>
+                <!-- Contenedor exclusivo con clase .css-carousel -->
+                <div class="css-carousel">
+                    <div class="css-carousel-track">
+                        <div class="css-slide" id="css-slide-1">
+                            <img src="https://th.bing.com/th/id/OIP.45eOhAae9becmYXH3eBoIAAAAA?w=217&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Paisaje natural 1">
+                        </div>
+                        <div class="css-slide" id="css-slide-2">
+                            <img src="https://th.bing.com/th/id/OIP.f82rQ19jVhqxoOv4D5NzJgHaFj?w=217&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Paisaje natural 2">
+                        </div>
+                        <div class="css-slide" id="css-slide-3">
+                            <img src="https://th.bing.com/th/id/OIP.CEYOfDCeTSsnthWPOnoQEwHaFj?w=217&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Paisaje natural 3">
+                        </div>
+                    </div>
+                    <div class="css-carousel-nav">
+                        <a href="#css-slide-1"></a>
+                        <a href="#css-slide-2"></a>
+                        <a href="#css-slide-3"></a>
+                    </div>
+                </div>
+                <header id="himno">
+                    <h2>Himno Nacional</h2>
+                </header>
+                <div class="embed-box">
+                    <audio src="audio/himno-mexico-coral.mp3" controls></audio>
+                </div>
+  
+
+
+    </section>
+
+    <!-- SECCIÓN DE DOS COLUMNAS CON FORMULARIO INTEGRADO -->
+    <section class="hero-section" id="informes">
+        <div class="hero-container">
+            
+            <!-- Columna Izquierda: Textos y Beneficios (Estilo UMOV) -->
+            <div class="hero-text-side">
+                <span class="hero-tag">¡INSCRIPCIONES ABIERTAS!</span>
+                <h1 class="hero-title-custom">¿Tienes dudas?</h1>
+                <p class="hero-desc-custom">
+                    Déjanos tus datos y te contactaremos para ayudarte a elegir tu taller en la preparatoria 1.
+                </p>
+                
+                <div class="hero-subtitle-custom">
+                    Conoce todo sobre la prepa 1:
+                </div>
+                <div class="hero-benefits hero-benefits-column">
+                    <span>✓ Planes de estudio y duración oficial</span>
+                    <span>✓ Costos, becas Benito Juárez y formas de pago</span>
+                    <span>✓ Proceso de inscripción y requisitos</span>
+                    <span>✓ Validez oficial SEP y entrega de certificados</span>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Tarjeta Flotante con Formulario (10 campos/etiquetas) -->
+            <div class="hero-form-side">
+                <div class="cbtis-hero-form-card">
+                    
+                    <h3 class="form-card-title">
+                        Solicita informes
+                    </h3>
+
+                    <form id="form-hero-informes" action="#" method="POST">
+                        
+                        <!-- 1. Campo de Texto: Nombre -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <input type="text" id="info_nombre" name="nombre" required placeholder="Nombre" class="form-control-input">
+                        </div>
+
+                        <!-- 2. Campo de Texto: Apellido -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <input type="text" id="info_apellido" name="apellido" required placeholder="Apellido" class="form-control-input">
+                        </div>
+
+                        <!-- 3. Campo de Correo Electrónico -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <input type="email" id="info_email" name="email" required placeholder="Correo electrónico" class="form-control-input">
+                        </div>
+
+                        <!-- 4. Campo de Teléfono -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <input type="tel" id="info_telefono" name="telefono" required placeholder="Teléfono o WhatsApp" class="form-control-input">
+                        </div>
+
+                        <!-- 5. Menú Desplegable (Select): Nivel de Estudios -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <select id="info_nivel" name="nivel" required class="form-control-select">
+                                <option value="">Elige el nivel que deseas estudiar</option>
+                                <option value="media">Educación Media Superior (Bachillerato)</option>
+                            </select>
+                        </div>
+
+                        <!-- 6. Menú Desplegable (Select): Carrera Técnica -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <select id="info_carrera" name="carrera" required class="form-control-select">
+                                <option value="">Elige tu taller de interés</option>
+                                <option value="recursos">Futbol</option>
+                                <option value="programacion">volleybal</option>
+                                <option value="ciberseguridad">Deefensa personal</option>
+                                <option value="laboratorista">cocina</option>
+                            </select>
+                        </div>
+                         <div class="cbtis-input-group form-group-margin">
+                            <select id="info_carrera" name="carrera" required class="form-control-select">
+                                  <option value="">Escoge tu turno favorito</option>
+                                 <optgroup label="Turnos">
+                             <option value="recursos">Matutino</option>
+                                <option value="programacion">Vespertino</option>
+                            </select>
+                        </div>
+                         <header id="ubicacion">
+                    <h2>Ubica mejor nuestras instalaciones:</h2>
+                </header>
+                <p><mark>Conoce donde se ubica la prepa 1 </p>.</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.2686410889983!2d-99.19788612622054!3d18.91949968225311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cddfb2ab6c1b83%3A0xaf45e385d0637fbb!2sPreparatoria%20Licenciado%20Bernabe%20L.%20de%20Elias%20N.1!5e0!3m2!1sen!2smx!4v1793204766850!5m2!1sen!2smx" 
+                            width="100%" 
+                            height="350" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade" 
+                            title="Ubicación prepa 1">
+                    </iframe>
+                </div>
+                 <header>
+
+                    <h2 id="video"><mark>Conoce más sobre tu prepa</h2>
+                </header>
+                <p>Integra un reproductor externo optimizado mediante un marco flotante <code>&lt;iframe&gt;</code>.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/KNZPpp8RjIE?si=LcgfoUUgvR--6--W"
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+
+                        <!-- 7. Campo de Fecha (Date): Fecha estimada de ingreso -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <label for="info_fecha" class="form-date-label">Fecha estimada de ingreso:</label>
+                            <input type="date" id="info_fecha" name="fecha" required class="form-control-date">
+                        </div>
+                        
+
+
+                        <!-- 8. Área de Texto (Textarea): Dudas adicionales -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <textarea id="info_comentarios" name="comentarios" rows="2" placeholder="Escribe tus dudas o comentarios..." class="form-control-textarea"></textarea>
+                        </div>
+
+
+                      <!-- 9. Casilla de Verificación (Checkbox): Términos y privacidad -->
+                        <div class="cbtis-input-group form-group-checkbox">
+                            <input type="checkbox" id="info_terminos" name="terminos" required class="form-checkbox-input">
+                            <label for="info_terminos" class="form-checkbox-label">
+                                Acepto recibir información y el aviso de privacidad de la perparatoria 1.
+                            </label>
+                        </div>
+
+                        <!-- 10. Botón de Envío (Submit Button) -->
+                        <button type="submit" class="cbtis-btn-ingresar form-submit-btn">
+                            Solicitar informes
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE CONVENIOS DOBLE LÍNEA -->
+    <section class="convenios-section" id="convenios">
+        <div class="convenios-container">
+            
+            <div class="section-header">
+                <span class="teachers-tag convenience-tag-custom">¿QUIÉNES CONFÍAN EN LA PREPA 1?</span>
+                <h2>Nuestros Convenios</h2>
+                <p>Grandes empresas e instituciones forman a sus colaboradores en nuestro plantel y contratan a nuestra comunidad egresada.</p>
+            </div>
+
+            <!-- LÍNEA 1: Se desplaza hacia la IZQUIERDA -->
+            <div class="marquee-wrapper">
+                <div class="marquee-track marquee-track-top">
+                    <div class="convenio-card">🏢 PEMEX</div>
+                    <div class="convenio-card">🚗 Grupo Carso</div>
+                    <div class="convenio-card">🏦 Citibanamex</div>
+                    <div class="convenio-card">📞 TELMEX</div>
+                    <div class="convenio-card">🏛️ Secretaría de Hacienda</div>
+                    <div class="convenio-card">📦 Mercado Libre</div>
+                    <div class="convenio-card">🌴 Grupo Xcaret</div>
+                    <div class="convenio-card">🌐 CISCO Networking</div>
+                    <!-- Duplicado para efecto infinito fluido -->
+                    <div class="convenio-card">🏢 PEMEX</div>
+                    <div class="convenio-card">🚗 Grupo Carso</div>
+                    <div class="convenio-card">🏦 Citibanamex</div>
+                    <div class="convenio-card">📞 TELMEX</div>
+                    <div class="convenio-card">🏛️ Secretaría de Hacienda</div>
+                    <div class="convenio-card">📦 Mercado Libre</div>
+                    <div class="convenio-card">🌴 Grupo Xcaret</div>
+                    <div class="convenio-card">🌐 CISCO Networking</div>
+                </div>
+            </div>
+
+            <!-- LÍNEA 2: Se desplaza hacia la DERECHA -->
+            <div class="marquee-wrapper marquee-wrapper-spacing">
+                <div class="marquee-track marquee-track-bottom">
+                    <div class="convenio-card">📰 Grupo Milenio</div>
+                    <div class="convenio-card">💊 San Pablo Farmacia</div>
+                    <div class="convenio-card">🏪 OXXO</div>
+                    <div class="convenio-card">⚡ Grupo Salinas</div>
+                    <div class="convenio-card">💻 Microsoft Partner</div>
+                    <div class="convenio-card">🎓 UNAM Vinculación</div>
+                    <div class="convenio-card">🏥 Hospital General</div>
+                    <div class="convenio-card">⚙️ Bosch México</div>
+                    <!-- Duplicado para efecto infinito fluido -->
+                    <div class="convenio-card">📰 Grupo Milenio</div>
+                    <div class="convenio-card">💊 San Pablo Farmacia</div>
+                    <div class="convenio-card">🏪 OXXO</div>
+                    <div class="convenio-card">⚡ Grupo Salinas</div>
+                    <div class="convenio-card">💻 Microsoft Partner</div>
+                    <div class="convenio-card">🎓 UNAM Vinculación</div>
+                    <div class="convenio-card">🏥 Hospital General</div>
+                    <div class="convenio-card">⚙️ Bosch México</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA (FOOTER CON REDES SOCIALES) -->
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <div class="footer-info">
+                <p>prepa 1 &copy; 2026</p>
+                <p class="footer-author"><b>Desarrollado por:Aranda Abundez Axel Aldair (3B PRO VESP)(CBTis166)</p>
+            </div>
+
+            <!-- Enlaces de Redes Sociales -->
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/Prepa1UANL/" target="_blank" class="social-icon" title="Facebook">f</a>
+                <a href="https://www.instagram.com/prepa1unam/" target="_blank" class="social-icon" title="Instagram">ig</a>
+                <a href="https://whatsapp.com" target="_blank" class="social-icon" title="WhatsApp">💬</a>
+                <a href="https://youtube.com" target="_blank" class="social-icon" title="YouTube"> ▶</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
